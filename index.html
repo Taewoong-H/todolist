@@ -19,24 +19,6 @@
                 </datalist>
                 <button type="button" class="delbutton">삭제</button>
             </li>
-            <li>해야할일2
-                <input list="important">
-                
-                <datalist id="important">
-                    <option value="상">
-                    <option value="중">
-                    <option value="하">
-                </datalist>
-                <button type="button" class="delbutton">삭제</button></li>
-            <li>해야할일3
-                <input list="important">
-                
-                <datalist id="important">
-                    <option value="상">
-                    <option value="중">
-                    <option value="하">
-                </datalist>
-                <button type="button" class="delbutton">삭제</button></li>
         </ul>
     </div>  
     <div>
@@ -47,13 +29,24 @@
         <button type="button" class="inputbutton" onclick="input()">입력</button></li>
     </div>
     <script>
-        var i=3;
+        var i=1;
+
         function input(){
             var temp = document.getElementById("inputbox").value;
             var node = document.createElement("LI");
             document.getElementById("myList").appendChild(node);
-            var button = document.getElementsByTagName('li')[i].innerHTML = temp + "<button type=\"button\">" + "삭제" + "</button>";
+            var button = document.getElementsByTagName('li')[i].innerHTML = temp + "<button type=\"button\" class=\"delbutton\">" + "삭제" + "</button>";
             i++;
+        }
+
+        var eventTarget = document.getElementsByClassName("delbutton")
+
+        for(i=0; i<eventTarget.length; i++){
+            eventTarget[i].addEventListener("click", function() {
+                var parent = document.querySelector('#myList')
+                parent.removeChild(this.parentElement)
+                i --
+            })
         }
     </script>
 </body>
