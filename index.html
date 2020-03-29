@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+<body>
+    <h1>To do list</h1>
+    <div>
+        <ul id="myList">
+            <li>해야할일1
+                <input list="important">
+
+                <datalist id="important">
+                    <option value="상">
+                    <option value="중">
+                    <option value="하">
+                </datalist>
+                <button type="button" class="delbutton">삭제</button>
+            </li>
+            <li>해야할일2
+                <input list="important">
+                
+                <datalist id="important">
+                    <option value="상">
+                    <option value="중">
+                    <option value="하">
+                </datalist>
+                <button type="button" class="delbutton">삭제</button></li>
+            <li>해야할일3
+                <input list="important">
+                
+                <datalist id="important">
+                    <option value="상">
+                    <option value="중">
+                    <option value="하">
+                </datalist>
+                <button type="button" class="delbutton">삭제</button></li>
+        </ul>
+    </div>  
+    <div>
+        <form id="input" action="">
+            <label for="inputbox">할 일 입력 : </label>
+            <input type="text" name="inputbox" id="inputbox">
+        </form>
+        <button type="button" class="inputbutton" onclick="input()">입력</button></li>
+    </div>
+    <script>
+        var i=3;
+        function input(){
+            var temp = document.getElementById("inputbox").value;
+            var node = document.createElement("LI");
+            document.getElementById("myList").appendChild(node);
+            var button = document.getElementsByTagName('li')[i].innerHTML = temp + "<button type=\"button\">" + "삭제" + "</button>";
+            i++;
+        }
+    </script>
+</body>
+</html>
