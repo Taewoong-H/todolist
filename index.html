@@ -1,53 +1,20 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>To do list</title>
 </head>
 <body>
-    <h1>To do list</h1>
-    <div>
-        <ul id="myList">
-            <li>해야할일1
-                <input list="important">
-
-                <datalist id="important">
-                    <option value="상">
-                    <option value="중">
-                    <option value="하">
-                </datalist>
-                <button type="button" class="delbutton">삭제</button>
-            </li>
-        </ul>
-    </div>  
-    <div>
-        <form id="input" action="">
-            <label for="inputbox">할 일 입력 : </label>
-            <input type="text" name="inputbox" id="inputbox">
-        </form>
-        <button type="button" class="inputbutton" onclick="input()">입력</button></li>
+    <div class="js-clock">
+        <h1 class="js-clock-now">00:00</h1>
     </div>
-    <script>
-        var i=1;
-
-        function input(){
-            var temp = document.getElementById("inputbox").value;
-            var node = document.createElement("LI");
-            document.getElementById("myList").appendChild(node);
-            var button = document.getElementsByTagName('li')[i].innerHTML = temp + "<button type=\"button\" class=\"delbutton\">" + "삭제" + "</button>";
-            i++;
-        }
-
-        var eventTarget = document.getElementsByClassName("delbutton")
-
-        for(i=0; i<eventTarget.length; i++){
-            eventTarget[i].addEventListener("click", function() {
-                var parent = document.querySelector('#myList')
-                parent.removeChild(this.parentElement)
-                i --
-            })
-        }
-    </script>
+    <form class="js-form form">
+        <input type="text" placeholder="what is your name"/>
+    </form>
+    <h4 class="js-greetings greetings"></h4>
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
 </body>
 </html>
