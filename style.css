@@ -2,6 +2,10 @@ body{
     background-color: gray;
 }
 
+.clock{
+    color: aquamarine;
+
+}
 .form, .greetings{
     display: none;
 }
