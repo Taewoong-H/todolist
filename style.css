@@ -3,13 +3,12 @@ body{
     text-align: center;
 }
 
-ul{
-    padding-inline-start: 230px
+.section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-li{
-    text-align: left;
-}
 .clock{
     color: aquamarine;
 
