@@ -1,29 +1,115 @@
 body{
-    background-color: gray;
-    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.section{
+body, html {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.center {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
+div {
+    display: block;
+}
+
+section {
+    display: flex;
+}
+
 .clock{
     color: aquamarine;
+    display: block;
+    font-size: 10em;
+}
 
+h3{
+    display: block;
+    margin: 0px;
+    font-size: 1.17em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.greetings{
+    
+    background: none;
+    border: none;
+    color: white;
+    font-size: 36px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
 }
 .form, .greetings{
     display: none;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+input {
+    background: none;
+    border: 0;
+    font-size: 22px;
+    color: white;
+    border-bottom: 2px solid white;
 }
 
 .showing{
     display: block;
 }
 
-.weather{
-    color: darkgreen;
+.toDo {
+    font-size: 22px;
 }
+
+.toDo_button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.location {
+    position: absolute;
+    font-style: italic;
+    font-size: 12px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.location_text {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in;
+    font-style: italic;
+    font-size: 15px;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.weather{
+    font-style: italic;
+    font-size: 12px;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

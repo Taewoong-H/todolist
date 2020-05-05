@@ -7,22 +7,24 @@
     <title>To do list</title>
 </head>
 <body>
-    <section class="section">
-        <div class="js-clock">
-            <h1 class="js-clock-now clock">00:00</h1>
+    <section class="center">
+        <div class="js-clock clock">
+            <h3 class="js-clock-now">00:00</h3>
         </div>
-        
         <form class="js-form form">
-            <input type="text" placeholder="what's your name">
+            <input type="text" class="name-input" placeholder="what's your name">
         </form>
         <h4 class="js-greetings greetings"></h4>
+        
         <form class="js-todoform">
             <input type="text" placeholder="Write a to do"/>
         </form>
         <ul class="js-todolist">
         </ul>
-        <span class="js-weather weather"></span>
     </section>
+    <div class="location">
+        <span class="js-weather weather"></span>
+    </div>
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
